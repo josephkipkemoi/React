@@ -58,10 +58,10 @@ import React from 'react';
     The solution for this problem is to use the React.forwardRed API (introduced with React 16.3)
 */
 
-export default function HOCComponent() {
+export default function HOCPage() {
     return (
         <>
-            <a href='#'>learn HOC</a>
+            <h1>Component Tutorial</h1>
         </>
     )
 }

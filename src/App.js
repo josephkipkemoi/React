@@ -1,24 +1,29 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import {BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+// Route Components
+import LandingPage from './Modules/LandingPage/LandingPage';
+import HOCPage from './Modules/HOCPage/HOCPage';
+import Header from './Commons/Header/Header';
 
 function App() {
+  
+  const isAuthenticated = 0;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+     <Router>
+          { isAuthenticated === 0
+            ?  <Header/> 
+            : <h1>Log out</h1>}
+         
+          <Routes>
+            <Route exact path="/" element={<LandingPage/>} />
+            <Route path='/HOC' element={<HOCPage/>}/> 
+          </Routes>     
+     </Router>
+    </>
   );
 }
 
