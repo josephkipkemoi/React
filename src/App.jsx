@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import './App.css';
 import {BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 // Route Components
-import LandingPage from './Modules/LandingPage/LandingPage';
 import HOCPage from './Modules/HOCPage/HOCPage';
 import Header from './Commons/Header/Header';
+
+const LandingPage = lazy(() => import('./Modules/LandingPage/LandingPage'));
 
 function App() {
   
@@ -17,11 +18,12 @@ function App() {
           { isAuthenticated === 0
             ?  <Header/> 
             : <h1>Log out</h1>}
-         
-          <Routes>
-            <Route exact path="/" element={<LandingPage/>} />
-            <Route path='/HOC' element={<HOCPage/>}/> 
-          </Routes>     
+          <Suspense fallback={<h1>Loading</h1>}>
+            <Routes>
+              <Route exact path="/" element={<LandingPage/>} />
+              <Route path='/HOC' element={<HOCPage/>}/> 
+            </Routes>  
+          </Suspense>            
      </Router>
     </>
   );

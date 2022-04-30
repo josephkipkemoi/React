@@ -27,7 +27,7 @@ class AppErrorBoundary extends React.Component {
 
     render() {
         if(this.state.hasError) {
-            return <h1>Something Bad is about to happen</h1>
+            return( <h1>Something Bad is about to happen</h1>)
         }
         return (
             <>
