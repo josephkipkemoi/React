@@ -52,4 +52,7 @@ src / Modules
 * Naming convenctions to be strictly followed 
 * Each route should be in its own folder with supporting files ( test files (Help.test.js) , styling (Help.css) etc)
 
+src / Utils
+* Will contain all application constants
+
     
