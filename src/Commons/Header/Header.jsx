@@ -8,10 +8,11 @@ const {home, HOC} = {
 
 export default function Header() {
     return (
-        <>
-         <Link to={home} >Home</Link>      
-         <Link to={HOC} data-testid="learn-hoc">Learn HOC</Link>
-        </>
-           
+        <nav>
+            <ol>
+                <li><Link to={home} >Home</Link></li>
+                <li><Link to={HOC} data-testid="learn-hoc">Learn HOC</Link></li>
+            </ol>
+        </nav>           
     )
 }
