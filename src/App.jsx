@@ -1,4 +1,5 @@
 import React, { lazy, Suspense } from 'react';
+import * as Sentry from '@sentry/react';
 import './App.css';
 import {BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
@@ -7,6 +8,7 @@ import HOCPage from './Modules/HOCPage/HOCPage';
 import Header from './Commons/Header/Header';
 
 const LandingPage = lazy(() => import('./Modules/LandingPage/LandingPage'));
+
 
 function App() {
   
@@ -29,4 +31,4 @@ function App() {
   );
 }
 
-export default App;
+export default Sentry.withProfiler(App);
