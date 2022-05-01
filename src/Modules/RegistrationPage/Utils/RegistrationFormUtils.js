@@ -7,6 +7,7 @@ const formInput = {
     passwordTestId: 'registration-password',
     confirmPasswordTestId: 'registration-confirm-password',
     agreeTermsTestId: 'registration-agree-terms',
+    uniTest: 'inpt-test',
 }
 
 const formInputLabelId = {
@@ -50,10 +51,11 @@ const formInputTypes = {
 }
 
 
+
 export {
     formInput,
     formInputLabelId,
     formInputTestIdLabel,
     formInputPlaceholderAndLabel,
-    formInputTypes
+    formInputTypes,
 }
