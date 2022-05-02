@@ -9,7 +9,7 @@ import { BrowserTracing } from '@sentry/tracing';
 // Error monitoring and reporting
 if(process.env.NODE_ENV === 'production') {
   Sentry.init({
-    dsn: 'https://4150ddd424ed4502a6afc5ae937851aa@o1227796.ingest.sentry.io/6373454',
+    dsn: process.env.REACT_APP_SENTRY_URL,
     integrations: [new BrowserTracing()],
     tracesSampleRate: 0.2
   })
