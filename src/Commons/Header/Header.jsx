@@ -1,18 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
+import { Nav } from "react-bootstrap";
+// import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
+ 
 
-const {home, HOC} = {
+export const {home, react, laravel} = {
     home: '/',
-    HOC: '/HOC'
+    react: '/react',
+    laravel: '/laravel',
 }
 
 export default function Header() {
+
+    const [activeKey, setActiveKey] = useState('1');
+
     return (
-        <nav>
-            <ol>
-                <li><Link to={home} >Home</Link></li>
-                <li><Link to={HOC} data-testid="learn-hoc">Learn HOC</Link></li>
-            </ol>
-        </nav>           
-    )
+        <Nav 
+        variant="tabs" 
+        defaultActiveKey={activeKey}
+        activeKey={activeKey}
+        onSelect={(selectedKey) => setActiveKey(selectedKey)}
+        >
+            <Nav.Item>
+                <Nav.Link data-testid="header-home-link" eventKey='1' as={Link} to={home}>Home</Nav.Link>
+            </Nav.Item>
+                <Nav.Item>
+                    <Nav.Link data-testid="header-react-link" eventKey='2'  as={Link} to={react} >React</Nav.Link>
+                </Nav.Item>
+            <Nav.Item>
+                <Nav.Item>
+                    <Nav.Link data-testid="header-laravel-link" eventKey='3'  as={Link} to={laravel}>Laravel</Nav.Link>
+                </Nav.Item>
+            </Nav.Item>
+        </Nav>
+    )  
 }

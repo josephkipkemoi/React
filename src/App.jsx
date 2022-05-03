@@ -3,9 +3,10 @@ import * as Sentry from '@sentry/react';
 import './App.css';
 import {BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-// Route Components
-import HOCPage from './Modules/HOCPage/HOCPage';
+// Route Page Components
 import Header from './Commons/Header/Header';
+import ReactPage from './Modules/ReactPage/ReactPage';
+import LaravelPage from './Modules/LaravelPage/LaravelPage';
 
 const LandingPage = lazy(() => import('./Modules/LandingPage/LandingPage'));
 
@@ -23,7 +24,8 @@ function App() {
           <Suspense fallback={<h1>Loading</h1>}>
             <Routes>
               <Route exact path="/" element={<LandingPage/>} />
-              <Route path='/HOC' element={<HOCPage/>}/> 
+              <Route path='/react' element={<ReactPage/>}/> 
+              <Route path='/laravel' element={<LaravelPage/>}/> 
             </Routes>  
           </Suspense>            
      </Router>

@@ -5,7 +5,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import * as Sentry from '@sentry/react';
 import { BrowserTracing } from '@sentry/tracing';
-
+import { ThemeProvider } from 'react-bootstrap';
 // Error monitoring and reporting
 if(process.env.NODE_ENV === 'production') {
   Sentry.init({
@@ -21,7 +21,9 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
+    <ThemeProvider breakpoints={['xxxl', 'xxl', 'xl', 'lg', 'md', 'sm', 'xs', 'xxs']}>
       <App/>
+    </ThemeProvider>
   </React.StrictMode>
 );
 

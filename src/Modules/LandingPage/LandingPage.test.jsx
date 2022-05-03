@@ -23,8 +23,8 @@ test("full app rendering/navigating", async () => {
         <App/>  
     );
 
-    expect(screen.getByText(/Learn HOC/i)).toBeInTheDocument();
-    await user.click(screen.getByText(/Learn HOC/i));
-    expect(screen.getByText(/Component Tutorial/i)).toBeInTheDocument();
+    expect(screen.getByTestId('header-react-link')).toBeInTheDocument();
+    await user.click(screen.getByTestId('header-react-link'));
+    expect(screen.getByText(/React Tutorials/i)).toBeInTheDocument();
 
-})
+})  

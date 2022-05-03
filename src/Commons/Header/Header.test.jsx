@@ -1,8 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
-import { createMemoryHistory } from "history";
 import { MemoryRouter, BrowserRouter as Router } from "react-router-dom";
-import LandingPage from "../../Modules/LandingPage/LandingPage";
 import Header from './Header';
 
 test('it renders Header componenet', () => {
@@ -10,8 +7,12 @@ test('it renders Header componenet', () => {
     <Header/>,
     {wrapper: MemoryRouter}
     );
-    const HOCLinkElement = screen.getByText('Learn HOC');
-    expect(HOCLinkElement).toBeInTheDocument();
-});
 
+    // const HomeLinkElement = screen.getByTestId('header-home-link');
+    // const ReactLinkElement = screen.getByTestId('header-react-link');
+    // const LaravelLinkElement = screen.getByTestId('header-laravel-link');
+    // expect(HomeLinkElement).toBeInTheDocument();
+    // expect(ReactLinkElement).toBeInTheDocument();
+    // expect(LaravelLinkElement).toBeInTheDocument();
+});
 
