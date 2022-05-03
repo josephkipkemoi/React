@@ -21,15 +21,15 @@ export default function Header() {
         activeKey={activeKey}
         onSelect={(selectedKey) => setActiveKey(selectedKey)}
         >
-            <Nav.Item>
-                <Nav.Link data-testid="header-home-link" eventKey='1' as={Link} to={home}>Home</Nav.Link>
+            <Nav.Item >
+                <Nav.Link className="p-3" data-testid="header-home-link" eventKey='1' as={Link} to={home}>Home</Nav.Link>
             </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link data-testid="header-react-link" eventKey='2'  as={Link} to={react} >React</Nav.Link>
+                    <Nav.Link className="p-3" data-testid="header-react-link" eventKey='2'  as={Link} to={react} >React</Nav.Link>
                 </Nav.Item>
             <Nav.Item>
                 <Nav.Item>
-                    <Nav.Link data-testid="header-laravel-link" eventKey='3'  as={Link} to={laravel}>Laravel</Nav.Link>
+                    <Nav.Link className="p-3" data-testid="header-laravel-link" eventKey='3'  as={Link} to={laravel}>Laravel</Nav.Link>
                 </Nav.Item>
             </Nav.Item>
         </Nav>
