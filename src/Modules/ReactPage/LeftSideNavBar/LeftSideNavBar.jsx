@@ -4,12 +4,12 @@ import { Collapse, Nav, Button } from "react-bootstrap";
 import MockData from '../../../Data/React.json';
 
 export const SideNavBar = () => {
-    const [open, setOpen] = useState([true, false, false]);
+    const [open, setOpen] = useState([true]);
 
     const SubTopics = () => {
     return  MockData.data.map((data, key) => {
           const {topic, subtopic} = data;
-          const [{title}] = subtopic;
+        //   const [{title}] = subtopic;
           return (
               <React.Fragment key={"d" + key}>
                 <Button
@@ -24,7 +24,9 @@ export const SideNavBar = () => {
                 </Button>
                 <Collapse in={open[key]}>
                     <div id="example-collapse-text">
-                        <Button variant="white">{title}</Button>                   
+                        {subtopic.map(({title}, key) => {
+                            return <Button key={"ek" + key} variant="white">{title}</Button>                  
+                        })}
                     </div>          
                 </Collapse>
               </React.Fragment>

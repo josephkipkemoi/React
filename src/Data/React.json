@@ -5,6 +5,7 @@
             "topic": "React Basics",
             "subtopic": [
                 {
+                    "id": 1,
                     "title": "Introduction to React",
                     "sub-title": [
                         {
@@ -26,7 +27,8 @@
                         ]
                 },
                 {
-                    "title": "STATE MANAGEMENT",
+                    "id": 2,
+                    "title": "State Management",
                     "sub-title": [
                         {
                             "sub-title-header": "Who should read this article",
@@ -53,6 +55,7 @@
             "topic": "React Intermediate",
             "subtopic": [
                 {
+                    "id": 3,
                     "title": "CORS Intermediate",
                     "sub-title": [
                         {
@@ -74,7 +77,8 @@
                         ]
                 },
                 {
-                    "title": "STATE MANAGEMENT",
+                    "id": 4,
+                    "title": "State Management",
                     "sub-title": [
                         {
                             "sub-title-header": "Who should read this article",
@@ -101,6 +105,7 @@
             "topic": "React Advanced",
             "subtopic": [
                 {
+                    "id": 5,
                     "title": "CORS Advanced",
                     "sub-title": [
                         {
@@ -122,7 +127,8 @@
                         ]
                 },
                 {
-                    "title": "Advanced STATE MANAGEMENT",
+                    "id": 6,
+                    "title": "Advanced State Management",
                     "sub-title": [
                         {
                             "sub-title-header": "Who should read this article",
