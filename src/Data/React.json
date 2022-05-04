@@ -1,0 +1,100 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "topic": "React",
+            "subtopic": [
+                {
+                    "title": "CORS",
+                    "sub-title": [
+                        {
+                            "sub-title-header": "Who should read this article",
+                            "sub-title-body": "some long text"
+                        },
+                        {
+                            "sub-title-header": "What Request uses CORS",
+                            "sub-title-body": "some cors text"
+                        },
+                        {
+                            "sub-title-header": "Functional Overview",
+                            "sub-title-body": "some long text"
+                        },
+                        {
+                            "sub-title-header": "Examples of access-control",
+                            "sub-title-body": "some long text"
+                        }
+                        ]
+                },
+                {
+                    "title": "STATE MANAGEMENT",
+                    "sub-title": [
+                        {
+                            "sub-title-header": "Who should read this article",
+                            "sub-title-body": "some long text"
+                        },
+                        {
+                            "sub-title-header": "What Request uses CORS",
+                            "sub-title-body": "some cors text"
+                        },
+                        {
+                            "sub-title-header": "Functional Overview",
+                            "sub-title-body": "some long text"
+                        },
+                        {
+                            "sub-title-header": "Examples of access-control",
+                            "sub-title-body": "some long text"
+                        }
+                        ]
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "topic": "Laravel",
+            "subtopic": [
+                {
+                    "title": "CORS",
+                    "sub-title": [
+                        {
+                            "sub-title-header": "Who should read this article",
+                            "sub-title-body": "some long text"
+                        },
+                        {
+                            "sub-title-header": "What Request uses CORS",
+                            "sub-title-body": "some cors text"
+                        },
+                        {
+                            "sub-title-header": "Functional Overview",
+                            "sub-title-body": "some long text"
+                        },
+                        {
+                            "sub-title-header": "Examples of access-control",
+                            "sub-title-body": "some long text"
+                        }
+                        ]
+                },
+                {
+                    "title": "STATE MANAGEMENT",
+                    "sub-title": [
+                        {
+                            "sub-title-header": "Who should read this article",
+                            "sub-title-body": "some long text"
+                        },
+                        {
+                            "sub-title-header": "What Request uses CORS",
+                            "sub-title-body": "some cors text"
+                        },
+                        {
+                            "sub-title-header": "Functional Overview",
+                            "sub-title-body": "some long text"
+                        },
+                        {
+                            "sub-title-header": "Examples of access-control",
+                            "sub-title-body": "some long text"
+                        }
+                        ]
+                }
+            ]
+        }
+    ]
+}
