@@ -3,48 +3,49 @@
         {
             "id": 1,
             "topic": "React Basics",
+            "topic_title": "Gutters are the padding between your columns, used to responsively space and align content in the Bootstrap grid system.",
             "subtopic": [
                 {
                     "id": 1,
                     "title": "Introduction to React",
-                    "sub-title": [
+                    "sub_title": [
                         {
-                            "sub-title-header": "Who should read this article",
-                            "sub-title-body": "some long text"
+                            "sub_title_header": "Who should read this article",
+                            "sub_title_body": "some long text"
                         },
                         {
-                            "sub-title-header": "What Request uses CORS",
-                            "sub-title-body": "some cors text"
+                            "sub_title_header": "What Request uses CORS",
+                            "sub_title_body": "some cors text"
                         },
                         {
-                            "sub-title-header": "Functional Overview",
-                            "sub-title-body": "some long text"
+                            "sub_title_header": "Functional Overview",
+                            "sub_title_body": "some long text"
                         },
                         {
-                            "sub-title-header": "Examples of access-control",
-                            "sub-title-body": "some long text"
+                            "sub_title_header": "Examples of access_control",
+                            "sub_title_body": "some long text"
                         }
                         ]
                 },
                 {
                     "id": 2,
                     "title": "State Management",
-                    "sub-title": [
+                    "sub_title": [
                         {
-                            "sub-title-header": "Who should read this article",
-                            "sub-title-body": "some long text"
+                            "sub_title_header": "Who should read this article",
+                            "sub_title_body": "some long text"
                         },
                         {
-                            "sub-title-header": "What Request uses CORS",
-                            "sub-title-body": "some cors text"
+                            "sub_title_header": "What Request uses CORS",
+                            "sub_title_body": "some cors text"
                         },
                         {
-                            "sub-title-header": "Functional Overview",
-                            "sub-title-body": "some long text"
+                            "sub_title_header": "Functional Overview",
+                            "sub_title_body": "some long text"
                         },
                         {
-                            "sub-title-header": "Examples of access-control",
-                            "sub-title-body": "some long text"
+                            "sub_title_header": "Examples of access_control",
+                            "sub_title_body": "some long text"
                         }
                         ]
                 }
@@ -57,44 +58,44 @@
                 {
                     "id": 3,
                     "title": "CORS Intermediate",
-                    "sub-title": [
+                    "sub_title": [
                         {
-                            "sub-title-header": "Who should read this article",
-                            "sub-title-body": "some long text"
+                            "sub_title_header": "Who should read this article",
+                            "sub_title_body": "some long text"
                         },
                         {
-                            "sub-title-header": "What Request uses CORS",
-                            "sub-title-body": "some cors text"
+                            "sub_title_header": "What Request uses CORS",
+                            "sub_title_body": "some cors text"
                         },
                         {
-                            "sub-title-header": "Functional Overview",
-                            "sub-title-body": "some long text"
+                            "sub_title_header": "Functional Overview",
+                            "sub_title_body": "some long text"
                         },
                         {
-                            "sub-title-header": "Examples of access-control",
-                            "sub-title-body": "some long text"
+                            "sub_title_header": "Examples of access_control",
+                            "sub_title_body": "some long text"
                         }
                         ]
                 },
                 {
                     "id": 4,
                     "title": "State Management",
-                    "sub-title": [
+                    "sub_title": [
                         {
-                            "sub-title-header": "Who should read this article",
-                            "sub-title-body": "some long text"
+                            "sub_title_header": "Who should read this article",
+                            "sub_title_body": "some long text"
                         },
                         {
-                            "sub-title-header": "What Request uses CORS",
-                            "sub-title-body": "some cors text"
+                            "sub_title_header": "What Request uses CORS",
+                            "sub_title_body": "some cors text"
                         },
                         {
-                            "sub-title-header": "Functional Overview",
-                            "sub-title-body": "some long text"
+                            "sub_title_header": "Functional Overview",
+                            "sub_title_body": "some long text"
                         },
                         {
-                            "sub-title-header": "Examples of access-control",
-                            "sub-title-body": "some long text"
+                            "sub_title_header": "Examples of access_control",
+                            "sub_title_body": "some long text"
                         }
                         ]
                 }
@@ -107,44 +108,44 @@
                 {
                     "id": 5,
                     "title": "CORS Advanced",
-                    "sub-title": [
+                    "sub_title": [
                         {
-                            "sub-title-header": "Who should read this article",
-                            "sub-title-body": "some long text"
+                            "sub_title_header": "Who should read this article",
+                            "sub_title_body": "some long text"
                         },
                         {
-                            "sub-title-header": "What Request uses CORS",
-                            "sub-title-body": "some cors text"
+                            "sub_title_header": "What Request uses CORS",
+                            "sub_title_body": "some cors text"
                         },
                         {
-                            "sub-title-header": "Functional Overview",
-                            "sub-title-body": "some long text"
+                            "sub_title_header": "Functional Overview",
+                            "sub_title_body": "some long text"
                         },
                         {
-                            "sub-title-header": "Examples of access-control",
-                            "sub-title-body": "some long text"
+                            "sub_title_header": "Examples of access_control",
+                            "sub_title_body": "some long text"
                         }
                         ]
                 },
                 {
                     "id": 6,
                     "title": "Advanced State Management",
-                    "sub-title": [
+                    "sub_title": [
                         {
-                            "sub-title-header": "Who should read this article",
-                            "sub-title-body": "some long text"
+                            "sub_title_header": "Who should read this article",
+                            "sub_title_body": "some long text"
                         },
                         {
-                            "sub-title-header": "What Request uses CORS",
-                            "sub-title-body": "some cors text"
+                            "sub_title_header": "What Request uses CORS",
+                            "sub_title_body": "some cors text"
                         },
                         {
-                            "sub-title-header": "Functional Overview",
-                            "sub-title-body": "some long text"
+                            "sub_title_header": "Functional Overview",
+                            "sub_title_body": "some long text"
                         },
                         {
-                            "sub-title-header": "Examples of access-control",
-                            "sub-title-body": "some long text"
+                            "sub_title_header": "Examples of access_control",
+                            "sub_title_body": "some long text"
                         }
                         ]
                 }
