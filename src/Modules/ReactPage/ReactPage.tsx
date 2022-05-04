@@ -1,6 +1,7 @@
 import React from "react";
 import { SideNavBar } from "./SideNavBar/SideNavBar";
 import { Col, Row } from "react-bootstrap";
+import MainComponent from "./MainComponent/MainComponent";
 
 export default function ReactPage() {
     
@@ -10,7 +11,7 @@ export default function ReactPage() {
                 <SideNavBar/>
             </Col>
             <Col className="shadow-sm col-sm-7">
-                <h1>React Tutorials</h1>
+                <MainComponent/>
             </Col>
             <Col md className="col-sm-2">
                 <div className="shadow-sm">
