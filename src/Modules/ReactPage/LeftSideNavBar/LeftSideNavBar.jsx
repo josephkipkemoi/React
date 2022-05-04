@@ -1,26 +1,46 @@
 import React, {useState} from "react";
 import './LeftSideNavBar.css';
 import { Collapse, Nav, Button } from "react-bootstrap";
+import MockData from '../../../Data/React.json';
 
 export const SideNavBar = () => {
-    const [basicsOpen, setBasicsOpen] = useState(true);
-    const [conceptsOpen, setConceptsOpen] = useState(false);
-    const [advancedOpen, setAdvancedOpen] = useState(false);
+    const [open, setOpen] = useState([true, false, false]);
 
-    const IsBasicsOpen = () =>  ( 
-                                basicsOpen ? 
-                                <i className="bi bi-arrow-down-circle custom-icon-position" style={{ fontSize: '18px' }}></i> : 
-                                <i className="bi bi-arrow-right-circle custom-icon-position" style={{ fontSize: '18px' }}></i>
-                                )
+    const SubTopics = () => {
+    return  MockData.data.map((data, key) => {
+          const {topic, subtopic} = data;
+          const [{title}] = subtopic;
+          return (
+              <React.Fragment key={"d" + key}>
+                <Button
+                    onClick={() => IsOpen(key)}
+                    aria-controls="example-collapse-text"
+                    aria-expanded={open[key]}
+                    variant="light"
+                    className="m-2 custom-btn-position d-flex align-items-center"
+                >
+                     {IsBasicsOpen(key)}
+                    {topic}
+                </Button>
+                <Collapse in={open[key]}>
+                    <div id="example-collapse-text">
+                        <Button variant="white">{title}</Button>                   
+                    </div>          
+                </Collapse>
+              </React.Fragment>
+          )
+      })
+       
+    }    
 
-    const IsConceptsOpen = () =>  (
-                                conceptsOpen ? 
-                                <i className="bi bi-arrow-down-circle custom-icon-position" style={{ fontSize: '18px' }}></i> : 
-                                <i className="bi bi-arrow-right-circle custom-icon-position" style={{ fontSize: '18px' }}></i>
-                                )
+    const IsOpen = (key) => {
+        const newItem = [...open]
+        newItem[key] = !newItem[key]
+        setOpen(newItem)
+    }
 
-    const IsAdvancedOpen = () =>  (
-                                advancedOpen ? 
+    const IsBasicsOpen = (key) =>  ( 
+                                open[key] ? 
                                 <i className="bi bi-arrow-down-circle custom-icon-position" style={{ fontSize: '18px' }}></i> : 
                                 <i className="bi bi-arrow-right-circle custom-icon-position" style={{ fontSize: '18px' }}></i>
                                 )
@@ -29,56 +49,9 @@ export const SideNavBar = () => {
         <>
           <Nav 
             className="flex-column shadow-sm p-2"
-            >        
-                <Button
-                    onClick={() => setBasicsOpen(!basicsOpen)}
-                    aria-controls="example-collapse-text"
-                    aria-expanded={basicsOpen}
-                    variant="light"
-                    className="m-2 custom-btn-position d-flex align-items-center"
-                >
-                    <IsBasicsOpen/>
-                    React Basics 
-                </Button>
-                <Collapse in={basicsOpen}>
-                    <div id="example-collapse-text">
-                        <Button variant="white">Memory Management in React</Button>
-                        <Button variant="white">Memory Management in React</Button>
-                        <Button variant="white">Memory Management in React</Button>                    </div>          
-                </Collapse>
-                <Button
-                    onClick={() => setConceptsOpen(!conceptsOpen)}
-                    aria-controls="example-collapse-text"
-                    aria-expanded={conceptsOpen}
-                    variant="light"
-                    className="m-2 custom-btn-position"
-                >
-                <IsConceptsOpen/>
-                React Concepts
-                </Button>
-                <Collapse in={conceptsOpen}>
-                    <div id="example-collapse-text">
-                        <Button variant="white">Memory Management in React</Button>
-                        <Button variant="white">Memory Management in React</Button>
-                        <Button variant="white">Memory Management in React</Button>                    </div>
-                </Collapse>
-                <Button
-                    onClick={() => setAdvancedOpen(!advancedOpen)}
-                    aria-controls="example-collapse-text"
-                    aria-expanded={advancedOpen}
-                    className="m-2 custom-btn-position"
-                    variant="light"
-                >
-                <IsAdvancedOpen/>
-                React Advanced  
-                </Button>
-                <Collapse in={advancedOpen}>
-                    <div id="example-collapse-text">
-                        <Button variant="white">Memory Management in React</Button>
-                        <Button variant="white">Memory Management in React</Button>
-                        <Button variant="white">Memory Management in React</Button>
-                    </div>
-                </Collapse>
+            >       
+            <SubTopics/>
+                
             </Nav>
         </>
     )

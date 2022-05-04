@@ -3,6 +3,7 @@ import { Button, Nav } from 'react-bootstrap';
 import './RightSideNavBar.css'; 
 
 export default function RightSideNavBar() {
+    
     return (
         <>
             <div>

@@ -2,10 +2,10 @@
     "data": [
         {
             "id": 1,
-            "topic": "React",
+            "topic": "React Basics",
             "subtopic": [
                 {
-                    "title": "CORS",
+                    "title": "Introduction to React",
                     "sub-title": [
                         {
                             "sub-title-header": "Who should read this article",
@@ -50,10 +50,10 @@
         },
         {
             "id": 2,
-            "topic": "Laravel",
+            "topic": "React Intermediate",
             "subtopic": [
                 {
-                    "title": "CORS",
+                    "title": "CORS Intermediate",
                     "sub-title": [
                         {
                             "sub-title-header": "Who should read this article",
@@ -75,6 +75,54 @@
                 },
                 {
                     "title": "STATE MANAGEMENT",
+                    "sub-title": [
+                        {
+                            "sub-title-header": "Who should read this article",
+                            "sub-title-body": "some long text"
+                        },
+                        {
+                            "sub-title-header": "What Request uses CORS",
+                            "sub-title-body": "some cors text"
+                        },
+                        {
+                            "sub-title-header": "Functional Overview",
+                            "sub-title-body": "some long text"
+                        },
+                        {
+                            "sub-title-header": "Examples of access-control",
+                            "sub-title-body": "some long text"
+                        }
+                        ]
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "topic": "React Advanced",
+            "subtopic": [
+                {
+                    "title": "CORS Advanced",
+                    "sub-title": [
+                        {
+                            "sub-title-header": "Who should read this article",
+                            "sub-title-body": "some long text"
+                        },
+                        {
+                            "sub-title-header": "What Request uses CORS",
+                            "sub-title-body": "some cors text"
+                        },
+                        {
+                            "sub-title-header": "Functional Overview",
+                            "sub-title-body": "some long text"
+                        },
+                        {
+                            "sub-title-header": "Examples of access-control",
+                            "sub-title-body": "some long text"
+                        }
+                        ]
+                },
+                {
+                    "title": "Advanced STATE MANAGEMENT",
                     "sub-title": [
                         {
                             "sub-title-header": "Who should read this article",
