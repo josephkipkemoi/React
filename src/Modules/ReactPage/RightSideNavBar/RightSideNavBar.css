@@ -1,0 +1,12 @@
+.custom-img-rounded {
+    width: 62px;
+    height: 62px; 
+    border: 1px solid;
+}
+
+.custom-img-rounded-position {
+    position: absolute;
+    margin-top: -28px;
+    margin-left: -2px;
+    font-size: 62px;
+}

@@ -13,8 +13,7 @@ export default function MainComponent() {
     }
 
     return (
-        <Card className="border-0 d-flex flex-column justify-content-center">
-          
+        <Card className="border-0 d-flex flex-column">          
             <IsDataAvailable/>
         </Card>
     )
@@ -50,7 +49,6 @@ const DummyData = () => {
                 <Button>
                     Next Article
                 </Button>
-
             </div>
         </>
     )
