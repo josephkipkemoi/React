@@ -1,9 +1,13 @@
 import React from 'react';
 import { Button, Nav } from 'react-bootstrap';
 import './RightSideNavBar.css'; 
+import MockData from '../../../Data/React.json';
+import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 export default function RightSideNavBar() {
-    
+    // const location = useLocation();
+
     return (
         <>
             <div>
@@ -31,9 +35,11 @@ export default function RightSideNavBar() {
                 <div className='text-secondary mt-2'>
                     <strong>On this Page</strong>
                     <Nav>
-                        <Nav.Item >
-                            <Nav.Link>How they work</Nav.Link>
-                        </Nav.Item>
+                        {MockData.data[0].subtopic[0].sub_title.map((data,key) => {                        
+                            const {sub_title_header} = data;
+                            return  <Nav.Item key={"g"+key}><Nav.Link as={Link} to={`#${sub_title_header}`}>{sub_title_header}</Nav.Link></Nav.Item>
+                        })}
+                       
                     </Nav>
                 </div>
             </div>

@@ -1,6 +1,6 @@
 import React from "react";
-import { Button, Card } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Button, Card, Nav } from "react-bootstrap";
+import { Link, useLocation } from "react-router-dom";
 import MockData from '../../../Data/React.json';
 
 export default function MainComponent() {
@@ -21,12 +21,14 @@ export default function MainComponent() {
 }
 
 const DummyData = () => {
+    const location = useLocation();
+
     return (
         <>
         {MockData.data.map((data) => {
             const { id, topic, topic_title, subtopic } = data;
 
-            return id === 1 && (<> 
+            return id === 1 && (<React.Fragment key={subtopic}> 
                                     <Card.Header className="bg-white border-0">
                                         <h1>{topic}</h1>                                    
                                     </Card.Header> 
@@ -38,19 +40,20 @@ const DummyData = () => {
                                                 const {title, sub_title, id} = sub;
 
                                                 return( 
-                                                <>
+                                                <React.Fragment key={id+'dda'}>
                                                 <h2>{id === 1 && title}</h2>
-                                                {sub_title.map(({sub_title_body, sub_title_header}) => ( <>
-                                                                                                            <h3>{id === 1 && sub_title_header}</h3> 
-                                                                                                            <p>{id === 1 && sub_title_body}</p></>
+                                                {sub_title.map(({sub_title_body, sub_title_header}) => ( <React.Fragment key={"dd"+sub_title_header}>
+                                                                                                            <h3 id={location.hash}><Nav.Link as={Link} id={location.hash} to={location.hash}>{id === 1 && sub_title_header}</Nav.Link></h3> 
+                                                                                                            <p>{id === 1 && sub_title_body}</p>
+                                                                                                        </React.Fragment>
                                                                                                         )
                                                                 )
                                                 }
-                                                </>
+                                                </React.Fragment>
                                                 )                                      
                                             })}
                                      </Card.Body>
-                                 </>);
+                                 </React.Fragment>);
                 
         })}
 
