@@ -5,10 +5,11 @@ import { Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 
-export const {home, react, laravel} = {
+export const {home, react, laravel, RTKQuery} = {
     home: '/',
     react: '/react',
     laravel: '/laravel',
+    RTKQuery: '/RTKQuery'
 }
 
 export default function Header() {
@@ -52,6 +53,18 @@ export default function Header() {
                     as={Link} 
                     to={laravel}>
                         Laravel
+                    </Nav.Link>
+                </Nav.Item>
+            </Nav.Item>
+            <Nav.Item>
+                <Nav.Item>
+                    <Nav.Link 
+                    className="p-3 text-secondary" 
+                    data-testid="header-laravel-link" 
+                    eventKey='3'  
+                    as={Link} 
+                    to={RTKQuery}>
+                        React Toolkit
                     </Nav.Link>
                 </Nav.Item>
             </Nav.Item>

@@ -6,6 +6,8 @@ import reportWebVitals from './reportWebVitals';
 import * as Sentry from '@sentry/react';
 import { BrowserTracing } from '@sentry/tracing';
 import { Container, ThemeProvider } from 'react-bootstrap';
+import { store } from './Services/Store/Store';
+import { Provider } from 'react-redux';
 // Error monitoring and reporting
 if(process.env.NODE_ENV === 'production') {
   Sentry.init({
@@ -23,7 +25,9 @@ root.render(
   <React.StrictMode>
     <ThemeProvider breakpoints={['xxxl', 'xxl', 'xl', 'lg', 'md', 'sm', 'xs', 'xxs']}>
       <Container>
-        <App/>
+        <Provider store={store}>
+          <App/>
+        </Provider>
       </Container>
     </ThemeProvider>
   </React.StrictMode>

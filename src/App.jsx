@@ -7,6 +7,7 @@ import {BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './Commons/Header/Header';
 import ReactPage from './Modules/ReactPage/ReactPage';
 import LaravelPage from './Modules/LaravelPage/LaravelPage';
+import RTKQuery from './Modules/RTKQuery/RTKQuery';
 
 const LandingPage = lazy(() => import('./Modules/LandingPage/LandingPage'));
 
@@ -26,6 +27,7 @@ function App() {
               <Route exact path="/" element={<LandingPage/>} />
               <Route path='/react' element={<ReactPage/>}/> 
               <Route path='/laravel' element={<LaravelPage/>}/> 
+              <Route path='/RTKQuery' element={<RTKQuery/>}/>
             </Routes>  
           </Suspense>            
      </Router>
