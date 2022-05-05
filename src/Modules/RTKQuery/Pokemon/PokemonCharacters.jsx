@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Spinner } from "react-bootstrap";
 import { useGetPaginatedPokemonCharactersQuery } from "../../../Services/Hooks/PokemonHook";
 import { PropTypes } from "prop-types"
@@ -9,7 +9,11 @@ PokemonCharacters.propTypes = {
 
 export default function PokemonCharacters({onClick}) {
 
-    const {data, error, isLoading} = useGetPaginatedPokemonCharactersQuery();
+    const offsetCount = Number(localStorage.getItem('offset')) === 0 ? 0 : Number(localStorage.getItem('offset'));
+
+    const [offset, setOffset] = useState( offsetCount );
+
+    const {data, error, isLoading} = useGetPaginatedPokemonCharactersQuery({ offset, limit: 10 });
 
     if(error) {
         throw Error('Error Fetching data')
@@ -19,7 +23,7 @@ export default function PokemonCharacters({onClick}) {
         return <Spinner></Spinner>
     }
   
-    const { count , results} = data;
+    const { count , results, previous, next} = data;
 
     const PokemonNames = () => {
         return (
@@ -28,16 +32,23 @@ export default function PokemonCharacters({onClick}) {
             </>
         )
     }
+
+    const getNextGames = () => setOffset((prevState) => prevState + 10);
+    
+    const getPreviousGames = () => setOffset((prevState) => prevState - 10);
+ 
+    localStorage.setItem('offset', offset);
+
     return (
         <>
             <h3>Pokemon Characters</h3>
             <p>{count} pokemons found</p>
             <PokemonNames />
             <div className="d-sm-flex justify-content-between p-2">
-                <Button>
+                <Button disabled={!previous} onClick={() => getPreviousGames()}>
                     Previous
                 </Button>
-                <Button>
+                <Button disabled={!next} onClick={() => getNextGames()}>
                     Next
                 </Button>
             </div>

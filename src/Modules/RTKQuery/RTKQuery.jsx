@@ -1,25 +1,27 @@
-import React, {useState} from "react";
+import React, { useState} from "react";
 import PokemonCharacters from "./Pokemon/PokemonCharacters";
+import PokemonRightSideNavProfile from "./Pokemon/PokemonRIghtSideNavProfile";
 import { Col, Row, Spinner } from 'react-bootstrap';
 import { useGetPokemonByNameQuery } from '../../Services/Hooks/PokemonHook';
 
 export default function RTKQuery() {
 
-    const [name, setName] = useState('bulbasaur')
+    const [charName, setName] = useState('bulbasaur')
     
-    const {data, error , isLoading} = useGetPokemonByNameQuery(name);
+    const {data, error , isLoading} = useGetPokemonByNameQuery(charName);
     
     if(error)  {
         throw Error('Error Fetching Data')
     }
 
-    const PokemonCharacterProfile = () => {
-      
-        if(isLoading) {
-            return <Spinner></Spinner>
-        }
+     
+    if(isLoading) {
+        return <Spinner></Spinner>
+    }
 
-        const {name, base_experience, height, order, sprites, weight} = data;
+    const {name, base_experience, height, order, sprites, weight, id} = data;
+
+    const PokemonCharacterProfile = () => {
 
         const [spritesGender, ] = useState({
             male: [sprites.front_default, sprites.back_default, sprites.front_shiny, sprites.back_shiny],
@@ -61,8 +63,8 @@ export default function RTKQuery() {
         )
     }
 
-    const onClick = (name) => setName(name)
- 
+    const onClick = (name) => setName(name);
+
     return (
         <>
            <Row>
@@ -73,7 +75,7 @@ export default function RTKQuery() {
                     <PokemonCharacterProfile/>
                 </Col>
                 <Col className="col-3">
-
+                    <PokemonRightSideNavProfile id={id}/>
                 </Col>
            </Row>
 
