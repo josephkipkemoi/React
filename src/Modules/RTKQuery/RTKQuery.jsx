@@ -3,6 +3,8 @@ import PokemonCharacters from "./Pokemon/PokemonCharacters";
 import PokemonRightSideNavProfile from "./Pokemon/PokemonRIghtSideNavProfile";
 import { Col, Row, Spinner } from 'react-bootstrap';
 import { useGetPokemonByNameQuery } from '../../Services/Hooks/PokemonHook';
+import PokemonCharacterAbility from "./Pokemon/PokemonCharacterAbility";
+import PokemonHeader from "./Pokemon/PokemonHeader";
 
 export default function RTKQuery() {
 
@@ -21,7 +23,7 @@ export default function RTKQuery() {
         return <Spinner></Spinner>
     }
 
-    const {name, base_experience, height, order, sprites, weight, id} = data;
+    const {name, base_experience, height, order, sprites, weight, id, abilities} = data;
 
     const PokemonCharacterProfile = () => {
 
@@ -70,6 +72,7 @@ export default function RTKQuery() {
     return (
         <>
            <Row>
+                <PokemonHeader/>
                 <Col className="col-3">         
                     <PokemonCharacters onClick={onClick}/>
                 </Col>
@@ -78,6 +81,7 @@ export default function RTKQuery() {
                 </Col>
                 <Col className="col-3">
                     <PokemonRightSideNavProfile id={id}/>
+                    <PokemonCharacterAbility abilities={abilities}/>
                 </Col>
            </Row>
 

@@ -8,6 +8,7 @@ import Header from './Commons/Header/Header';
 import ReactPage from './Modules/ReactPage/ReactPage';
 import LaravelPage from './Modules/LaravelPage/LaravelPage';
 import RTKQuery from './Modules/RTKQuery/RTKQuery';
+import Pokemon from './Modules/RTKQuery/Pokemon/Pokemon';
 
 const LandingPage = lazy(() => import('./Modules/LandingPage/LandingPage'));
 
@@ -28,6 +29,7 @@ function App() {
               <Route path='/react' element={<ReactPage/>}/> 
               <Route path='/laravel' element={<LaravelPage/>}/> 
               <Route path='/RTKQuery' element={<RTKQuery/>}/>
+              <Route path='/RTKQuery/:query' element={<Pokemon/>}/>
             </Routes>  
           </Suspense>            
      </Router>

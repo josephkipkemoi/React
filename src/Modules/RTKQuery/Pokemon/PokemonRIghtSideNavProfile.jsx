@@ -23,20 +23,20 @@ export default function PokemonRightSideNavProfile({ id}) {
 
     return (
         <>
-            <h3>Species: </h3>
-            <p>Name: {name}</p>
-            <p>Happiness: {base_happiness}</p>
-            <p>Capture Rate: {capture_rate}</p>
-            <p>Color: {color.name}</p>
-            <p>Form Switchable: {forms_switchable}</p>
-            <p>Gender Rate: {gender_rate}</p>
-            <p>Gender Difference: {has_gender_differences}</p>
-            <p>Hatch Count: {hatch_counter}</p>
-            <p>Baby: {(is_baby).toString()}</p>
-            <p>Legendary: {(is_legendary).toString()}</p>
-            <p>Mythical: {(is_mythical).toString()}</p>
-            <p>Order: {order}</p>
-            <p>Shape: {shape.name}</p>
+            <h5>Species: </h5>
+            <small className="d-block">Name: {name}</small>
+            <small className="d-block">Happiness: {base_happiness}</small>
+            <small className="d-block">Capture Rate: {capture_rate}</small>
+            <small className="d-block">Color: {color.name}</small>
+            <small className="d-block">Form Switchable: {forms_switchable}</small>
+            <small className="d-block">Gender Rate: {gender_rate}</small>
+            <small className="d-block">Gender Difference: {has_gender_differences}</small>
+            <small className="d-block">Hatch Count: {hatch_counter}</small>
+            <small className="d-block">Baby: {(is_baby).toString()}</small>
+            <small className="d-block">Legendary: {(is_legendary).toString()}</small>
+            <small className="d-block">Mythical: {(is_mythical).toString()}</small>
+            <small className="d-block">Order: {order}</small>
+            <small className="d-block">Shape: {shape.name}</small>
         </>
     )
 }
