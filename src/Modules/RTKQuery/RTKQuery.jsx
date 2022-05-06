@@ -6,7 +6,9 @@ import { useGetPokemonByNameQuery } from '../../Services/Hooks/PokemonHook';
 
 export default function RTKQuery() {
 
-    const [charName, setName] = useState('bulbasaur')
+    const characterName = localStorage.getItem('charName') || 'bulbasaur';
+
+    const [charName, setName] = useState(characterName)
     
     const {data, error , isLoading} = useGetPokemonByNameQuery(charName);
     

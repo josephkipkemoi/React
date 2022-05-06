@@ -28,7 +28,7 @@ export default function PokemonCharacters({onClick}) {
     const PokemonNames = () => {
         return (
             <>
-                {results.map(({name}, key) => <Button onClick={() => onClick(name)} className="d-block w-100 m-1" variant="light" key={name+key}>{name}</Button>)}
+                {results.map(({name}, key) => <Button onClick={() => (onClick(name), localStorage.setItem('charName', name))} className="d-block w-100 m-1" variant="light" key={name+key}>{name}</Button>)}
             </>
         )
     }
