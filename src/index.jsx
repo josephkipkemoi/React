@@ -9,7 +9,7 @@ import { Container, ThemeProvider } from 'react-bootstrap';
 import { store } from './Services/Store/Store';
 import { Provider } from 'react-redux';
 // Error monitoring and reporting
-if(process.env.NODE_ENV === 'production') {
+if(process.env.NODE_ENV !== 'production') {
   Sentry.init({
     // dsn: process.env.production.local.REACT_APP_SENTRY_URL,
     dsn :'https://o1227796.ingest.sentry.io/api/6373454/security/?sentry_key=4150ddd424ed4502a6afc5ae937851aa',
