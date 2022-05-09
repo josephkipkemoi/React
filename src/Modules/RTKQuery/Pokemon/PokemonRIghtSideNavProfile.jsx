@@ -3,9 +3,7 @@ import { PropTypes } from 'prop-types';
 import { useGetPokemonSpeciesQuery } from "../../../Services/Hooks/PokemonHook";
 import { Spinner } from "react-bootstrap";
 
-PokemonRightSideNavProfile.propTypes = {
-     id: PropTypes.number.isRequired,
-}
+
 
 export default function PokemonRightSideNavProfile({ id}) {
 
@@ -39,4 +37,8 @@ export default function PokemonRightSideNavProfile({ id}) {
             <small className="d-block">Shape: {shape.name}</small>
         </>
     )
+}
+
+PokemonRightSideNavProfile.propTypes = {
+    id: PropTypes.number.isRequired,
 }
