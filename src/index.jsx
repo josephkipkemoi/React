@@ -11,7 +11,7 @@ import { Provider } from 'react-redux';
 // Error monitoring and reporting
 if(process.env.NODE_ENV === 'production') {
   Sentry.init({
-    dsn: process.env.REACT_APP_SENTRY_URL,
+    dsn: process.env.production.local.REACT_APP_SENTRY_URL,
     integrations: [new BrowserTracing()],
     tracesSampleRate: 0.2
   })

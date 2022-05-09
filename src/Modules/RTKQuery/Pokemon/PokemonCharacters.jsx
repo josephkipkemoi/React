@@ -1,13 +1,9 @@
 import React, { useState } from "react";
 import { Button, Spinner } from "react-bootstrap";
 import { useGetPaginatedPokemonCharactersQuery } from "../../../Services/Hooks/PokemonHook";
-import { PropTypes } from "prop-types"
+import { Link } from "react-router-dom";
 
-PokemonCharacters.propTypes = {
-    onClick: PropTypes.func.isRequired,
-}
-
-export default function PokemonCharacters({onClick}) {
+export default function PokemonCharacters() {
 
     const offsetCount = Number(localStorage.getItem('offset')) === 0 ? 0 : Number(localStorage.getItem('offset'));
 
@@ -20,7 +16,7 @@ export default function PokemonCharacters({onClick}) {
     }
 
     if(isLoading) {
-        return <Spinner></Spinner>
+        return <Spinner animation="grow"></Spinner>
     }
   
     const { count , results, previous, next} = data;
@@ -28,7 +24,7 @@ export default function PokemonCharacters({onClick}) {
     const PokemonNames = () => {
         return (
             <>
-                {results.map(({name}, key) => <Button onClick={() => (onClick(name), localStorage.setItem('charName', name))} className="d-block w-100 m-1" variant="light" key={name+key}>{name}</Button>)}
+                {results.map(({name}, key) => <Link to={ "/Pokemon/Characters/" + name } className="d-block w-100 m-1 btn btn-light btn-sm" key={name+key}>{name}</Link>)}
             </>
         )
     }

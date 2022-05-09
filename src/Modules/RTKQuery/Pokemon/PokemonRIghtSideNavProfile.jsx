@@ -16,7 +16,7 @@ export default function PokemonRightSideNavProfile({ id}) {
     }
 
     if(isLoading) {
-        return <Spinner></Spinner>
+        return <Spinner animation="grow"></Spinner>
     }
 
     const {name, base_happiness, capture_rate, color , forms_switchable, gender_rate, has_gender_differences, hatch_counter, is_baby, is_legendary, is_mythical, order, shape } = data;

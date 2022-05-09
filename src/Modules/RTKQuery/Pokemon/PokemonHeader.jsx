@@ -11,7 +11,7 @@ export default function PokemonHeader() {
     return (
         <>
           <Nav>
-              {routes.map((data, key) => <Nav.Item key={data+key}><Nav.Link as={Link} to={"/RTKQuery/" + data}>{data}</Nav.Link></Nav.Item>)}
+              {routes.map((data, key) => <Nav.Item key={data+key}><Nav.Link as={Link} to={"/Pokemon/" + data}>{data}</Nav.Link></Nav.Item>)}
           </Nav>
         </>
     )
