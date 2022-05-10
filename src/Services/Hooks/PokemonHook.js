@@ -13,12 +13,16 @@ export const PokemonApi = createApi({
         getPokemonSpecies: builder.query({
             query: (id) => `pokemon-species/${id}`,
         }),
+        getPokemonColors: builder.query({
+            query: (color) => `pokemon-color/${color}`
+        }),
     }),
 })
 
 export const { 
     useGetPokemonByNameQuery, 
     useGetPaginatedPokemonCharactersQuery,
-    useGetPokemonSpeciesQuery
+    useGetPokemonSpeciesQuery,
+    useGetPokemonColorsQuery,
  } = PokemonApi;
 
