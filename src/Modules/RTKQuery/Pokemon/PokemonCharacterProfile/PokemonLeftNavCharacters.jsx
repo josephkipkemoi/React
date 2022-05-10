@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Button, Spinner } from "react-bootstrap";
-import { useGetPaginatedPokemonCharactersQuery } from "../../../Services/Hooks/PokemonHook";
+import { useGetPaginatedPokemonCharactersQuery } from "../../../../Services/Hooks/PokemonHook";
 import { Link } from "react-router-dom";
 
-export default function PokemonCharacters() {
+export default function PokemonLeftNavCharacters() {
 
     const offsetCount = Number(localStorage.getItem('offset')) === 0 ? 0 : Number(localStorage.getItem('offset'));
 
@@ -40,7 +40,7 @@ export default function PokemonCharacters() {
     return (
         <>
             <h3>Pokemon Characters</h3>
-            <p>{count} pokemons found</p>
+            <p>{count} pokemons founds</p>
             <PokemonNames />
             <div className="d-sm-flex justify-content-between p-2">
                 <Button disabled={!previous} onClick={() => getPreviousGames()}>

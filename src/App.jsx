@@ -9,7 +9,7 @@ import ReactPage from './Modules/ReactPage/ReactPage';
 import LaravelPage from './Modules/LaravelPage/LaravelPage';
 import RTKQuery from './Modules/RTKQuery/RTKQuery';
 import Pokemon from './Modules/RTKQuery/Pokemon/Pokemon';
-import PokemonCharacterProfile from './Modules/RTKQuery/Pokemon/PokemonCharacterProfile';
+import PokemonCharacterProfile from './Modules/RTKQuery/Pokemon/PokemonCharacterProfile/PokemonCharacterProfile';
 
 const LandingPage = lazy(() => import('./Modules/LandingPage/LandingPage'));
 

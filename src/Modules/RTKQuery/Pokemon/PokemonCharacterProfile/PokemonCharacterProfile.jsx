@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import PokemonCharacters from "./PokemonCharacters";
+import PokemonCharacters from "./PokemonLeftNavCharacters";
 import { Col, Row, Spinner } from 'react-bootstrap';
 import PokemonCharacterAbility from "./PokemonCharacterAbility";
-import PokemonRightSideNavProfile from "./PokemonRightSideNavProfile";
-import PokemonHeader from "./Pokemon";
-import { useGetPokemonByNameQuery } from "../../../Services/Hooks/PokemonHook";
+import PokemonRightSideNavProfile from "./PokemonCharacterSpecy";
+import PokemonHeader from "../Pokemon";
+import { useGetPokemonByNameQuery } from "../../../../Services/Hooks/PokemonHook";
 import { useParams } from "react-router-dom";
 
 export default function PokemonCharacterProfile() {
