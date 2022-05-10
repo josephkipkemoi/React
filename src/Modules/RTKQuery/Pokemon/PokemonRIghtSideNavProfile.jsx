@@ -10,7 +10,9 @@ export default function PokemonRightSideNavProfile({ id}) {
     const {data, error, isLoading} = useGetPokemonSpeciesQuery(id);
 
     if(error) {
-        throw Error('Error Fetching Data')
+        const { data } = error;
+
+        return <div className="alert alert-danger">{data}</div>
     }
 
     if(isLoading) {

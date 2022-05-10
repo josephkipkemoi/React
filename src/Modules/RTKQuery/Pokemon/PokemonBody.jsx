@@ -7,7 +7,6 @@ import PokemonSearch from "./PokemonSearch";
 
 export default function PokemonBody() {
  
- 
     return (
         <> 
           <PokemonSearch/>
@@ -35,7 +34,9 @@ const PokemonCharacters = () => {
     const { data, error, isLoading } = useGetPaginatedPokemonCharactersQuery({ offset, limit: 40 });
 
     if(error) {
-        return Error('Data not fetched')
+        const { data } = error;
+
+        return <div className="alert alert-danger">{data}</div>
     }
 
     if(isLoading) {

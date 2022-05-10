@@ -14,7 +14,9 @@ export default function PokemonCharacterProfile() {
     const {data, error , isLoading} = useGetPokemonByNameQuery(pokemon_name);
     
     if(error)  {
-        throw Error('Error Fetching Data')
+        const { data } = error;
+
+        return <div className="alert alert-danger">{data}</div>
     }
 
      

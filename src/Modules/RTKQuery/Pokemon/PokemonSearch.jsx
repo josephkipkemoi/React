@@ -16,7 +16,9 @@ export default function PokemonSearch() {
     const { data, error, isLoading } = useGetPaginatedPokemonCharactersQuery({ offset: 20, limit: 1126 });
 
     if(error) {
-        return Error('Error Fetching');
+        const { data } = error;
+
+        return <div className="alert alert-danger">{data}</div>
     }
 
     if(isLoading) {
