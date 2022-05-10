@@ -5,7 +5,7 @@ import { PropTypes } from 'prop-types';
 export default function PokemonAdvancedSearchResults({ pokemon_species }) {
    
     const Species = () => {
-        return pokemon_species.map(({name}, key) => {
+        return pokemon_species?.map(({name}, key) => {
             return <Button key={key + name}>{name}</Button>
         })
     }
