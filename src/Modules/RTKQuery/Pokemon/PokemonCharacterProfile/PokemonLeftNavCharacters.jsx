@@ -39,14 +39,20 @@ export default function PokemonLeftNavCharacters() {
 
     return (
         <>
-            <h3>Pokemon Characters</h3>
-            <p>{count} pokemons founds</p>
+            <h5>Characters</h5>
+
+            <div className="d-sm-flex justify-content-between">
+                <small>{count} founds</small>
+                <Link to="/Pokemon/Characters" className="text-decoration-none"><small>View all</small></Link>
+            </div>    
+
             <PokemonNames />
+
             <div className="d-sm-flex justify-content-between p-2">
-                <Button disabled={!previous} onClick={() => getPreviousGames()}>
+                <Button size="sm" disabled={!previous} onClick={() => getPreviousGames()}>
                     Previous
                 </Button>
-                <Button disabled={!next} onClick={() => getNextGames()}>
+                <Button size="sm" disabled={!next} onClick={() => getNextGames()}>
                     Next
                 </Button>
             </div>

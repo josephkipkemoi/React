@@ -6,6 +6,7 @@ import PokemonRightSideNavProfile from "./PokemonCharacterSpecy";
 import PokemonHeader from "../Pokemon";
 import { useGetPokemonByNameQuery } from "../../../../Services/Hooks/PokemonHook";
 import { useParams } from "react-router-dom";
+import PokemonCharacterForm from "./PokemonCharacterForm";
 
 export default function PokemonCharacterProfile() {
 
@@ -24,7 +25,7 @@ export default function PokemonCharacterProfile() {
         return <Spinner animation="grow"></Spinner>
     }
 
-    const {name, base_experience, height, order, sprites, weight, id, abilities} = data;
+    const {name, base_experience, height, order, sprites, weight, id, abilities, forms} = data;
 
     const PokemonCharacterProfile = () => {
 
@@ -71,15 +72,16 @@ export default function PokemonCharacterProfile() {
     return (
         <Row>
             <PokemonHeader/>
-            <Col className="col-3">         
+            <Col sm={3} md={3}>         
                 <PokemonCharacters />
             </Col>
             <Col>
                 <PokemonCharacterProfile/>
             </Col>
-            <Col className="col-3">
+            <Col sm={12} md={3}>
                 <PokemonRightSideNavProfile id={id}/>
                 <PokemonCharacterAbility abilities={abilities}/>
+                <PokemonCharacterForm forms={forms}/>
             </Col>
         </Row>
     )

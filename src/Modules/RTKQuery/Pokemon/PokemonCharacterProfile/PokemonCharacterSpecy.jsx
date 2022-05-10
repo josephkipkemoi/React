@@ -5,7 +5,7 @@ import { Spinner } from "react-bootstrap";
 
 
 
-export default function PokemonCharacterSpecy({ id}) {
+export default function PokemonCharacterSpecy({ id }) {
 
     const {data, error, isLoading} = useGetPokemonSpeciesQuery(id);
 
