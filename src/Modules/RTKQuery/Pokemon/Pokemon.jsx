@@ -1,5 +1,5 @@
 import React from 'react';
-import PokemonHeader from './PokemonHeader';
+import PokemonHeader from './Commons/PokemonHeader';
 import PokemonBody from './PokemonBody';
 import { Row , Col} from 'react-bootstrap';
 

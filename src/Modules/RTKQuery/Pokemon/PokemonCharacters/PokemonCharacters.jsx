@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './PokemonBody.css';
 import { Link } from "react-router-dom";
 import { useGetPaginatedPokemonCharactersQuery } from "../../../../Services/Hooks/PokemonHook";
 import { Button, Spinner } from "react-bootstrap";
@@ -32,7 +33,6 @@ export default function PokemonCharacters() {
     }
 
     localStorage.setItem('offset_count', offset);
- 
  
     return (
         <>

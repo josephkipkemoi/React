@@ -1,8 +1,7 @@
 import React, {  useState, useRef } from "react";
-import './PokemonBody.css';
-import { useGetPaginatedPokemonCharactersQuery } from "../../../Services/Hooks/PokemonHook";
+import { useGetPaginatedPokemonCharactersQuery } from "../../../../Services/Hooks/PokemonHook";
 import { Spinner, Row, Col } from "react-bootstrap";
-import InputElement from "../../../Commons/InputElement/SearchInputElement";
+import InputElement from "../../../../Commons/InputElement/SearchInputElement";
 
 import { Link } from "react-router-dom";
 import {PropTypes} from 'prop-types';
