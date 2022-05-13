@@ -56,11 +56,10 @@ const  checkStatus = ()  => {
         results.map((data) => store.add(data));
 
         const getDbTranscationData = db.transaction('pokemon_characters', 'readonly');
-          getDbTranscationData.objectStore('pokemon_characters');
+        const indexDbStore =  getDbTranscationData.objectStore('pokemon_characters');
        
      
-
-        return dbTransaction.complete;
+        return indexDbStore;
      }
 
 
@@ -71,11 +70,11 @@ const  checkStatus = ()  => {
         // it means that there's another open connection to the same database
         // and it wasn't closed after db.onversionchange triggered for it
     }
+
+  
  }
 
+
  
-  
-
-
 
  export default checkStatus;
