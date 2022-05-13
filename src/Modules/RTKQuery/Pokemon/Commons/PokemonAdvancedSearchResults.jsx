@@ -11,7 +11,7 @@ export default function PokemonAdvancedSearchResults({ pokemon_species }) {
     }
     
     return (
-        <div className="shadow">
+        <div className="shadow"> 
             <Card>
                 <Card.Body>
                 <h1>Results</h1>
