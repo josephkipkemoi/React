@@ -35,6 +35,7 @@ export default function PokemonCharacters() {
  
     return (
         <>
+ 
             <div className="row">
                 {results.map(({name}, key) =>  <Link key={key + name} to={"/Pokemon/Characters/" + name } className="text-decoration-none text-light col-2"><div className="m-3  p-2 char-name-box rounded bg-primary">{name}</div></Link>)}
             </div>
