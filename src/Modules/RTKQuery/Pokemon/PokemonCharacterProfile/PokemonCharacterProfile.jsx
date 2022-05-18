@@ -97,7 +97,7 @@ export default function PokemonCharacterProfile() {
                     <Col>
                     <PokemonCharacterStat stats={stats}/>
                     </Col>
-       
+                                       
                 </Row>
                
             </Col>
