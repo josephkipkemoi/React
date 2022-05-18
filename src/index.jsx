@@ -8,8 +8,8 @@ import reportWebVitals from './reportWebVitals';
 import { Container, ThemeProvider } from 'react-bootstrap';
 import { store } from './Services/Store/Store';
 import { Provider } from 'react-redux';
-import checkStatus from './Perfomance/IndexDb';
-import IndexDbTest from './Perfomance/IndexDbTest';
+// import checkStatus from './Perfomance/IndexDb';
+// import IndexDbTest from './Perfomance/IndexDbTest';
 // Error monitoring and reporting
 // if(process.env.NODE_ENV !== 'production') {
 //   Sentry.init({
@@ -22,10 +22,10 @@ import IndexDbTest from './Perfomance/IndexDbTest';
 
 // Browser compability check if IndexDB is supported in browser
 // To create fallback if not supported
-IndexDbTest();
+// IndexDbTest();
 
-// Run IndexDb Script File
-checkStatus();
+// // Run IndexDb Script File
+// checkStatus();
 
 
 const root = ReactDOM.createRoot(

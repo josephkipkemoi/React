@@ -8,14 +8,14 @@ export default function IndexDbTest() {
     */
 
     // Prefixes of implementations tested
-    // window.indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
+    const indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
 
-    // window.IDBTransaction = window.IDBTransaction || window.IDBTransaction || window.webkitIDBTransaction || 
-    //                         window.msIDBTransaction ||  {READ_WRITE: "readwrite"};
+    window.IDBTransaction = window.IDBTransaction || window.IDBTransaction || window.webkitIDBTransaction || 
+                            window.msIDBTransaction ||  {READ_WRITE: "readwrite"};
 
-    // window.IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange || window.msIDBKeyRange;
+    window.IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange || window.msIDBKeyRange;
 
-    if( !window.indexedDB ) {
+    if( !indexedDB ) {
         console.log('Your browser does not support IndexDB, Features .... will not be available')
     }
 

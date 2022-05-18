@@ -6,7 +6,7 @@ export default function PokemonAdvancedSearchResults({ pokemon_species }) {
    
     const Species = () => {
         return pokemon_species?.map(({name}, key) => {
-            return <Button key={key + name}>{name}</Button>
+            return <Button className="rounded-pill m-1" key={key + name}>{name}</Button>
         })
     }
     
